@@ -1,13 +1,13 @@
 #pragma once
 #include <iostream>
 
-#ifdef MY_DLL_EXPORTS
-#define DllExport __declspec(dllexport)
+#ifdef DINAMICHBIBLIOTVTORAYA_EXPORTS
+#define DINAMICHBIBLIOTVTORAYA_API __declspec(dllexport)
 #else
-#define DllExport __declspec(dllimport)
+#define DINAMICHBIBLIOTVTORAYA_API __declspec(dllimport)
 #endif
 
-class DllExport Leaver {
+class DINAMICHBIBLIOTVTORAYA_API Leaver {
 public:
 	std::string leave(std::string line);
 };
